@@ -1,0 +1,21 @@
+
+<div ng-controller="userController">
+  <pre>{{users | json}}</pre>
+  <input type="text" ng-model="search">
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th>name </th>
+        <th>email </th>
+        <th>age</th> 
+      </tr>
+    </thead>
+    <tbody>
+      <tr ng-repeat="user in users | filter:search">
+        <td>{{user.name}}</td>
+        <td>{{user.email}}</td>
+        <td>{{user.age}}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
